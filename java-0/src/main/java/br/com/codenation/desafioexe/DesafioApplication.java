@@ -6,10 +6,6 @@ import java.util.List;
 public class DesafioApplication {
 	private static int MAX_VALUE = 350;
 
-	public static void main(String[] args) {
-		System.out.println(fibonacci());
-	}
-
 	public static List<Integer> fibonacci() {
 		return fibonacciPreRecursive();
 	}
@@ -38,6 +34,7 @@ public class DesafioApplication {
 		if (valueMinusOne < MAX_VALUE && valueMinusTwo < MAX_VALUE){
 			integerList.add(valueMinusOne + valueMinusTwo);
 			return fibonacciRecursive(integerList);
+
 		}else {
 			return integerList;
 		}
