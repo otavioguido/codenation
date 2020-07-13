@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------
+Test set: com.challenge.suite.CandidateTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 14, Skipped: 0, Time elapsed: 0.047 s <<< FAILURE! - in com.challenge.suite.CandidateTest
+hasColumnStatus(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.CandidateTest.hasColumnStatus(CandidateTest.java:45)
+
+hasColumnStatusNotNull(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.CandidateTest.hasColumnStatusNotNull(CandidateTest.java:51)
+
+checkPrimaryKeysWithManyToOne(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasEmbeddedId(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkEmbeddedIdIsEmbeddable(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkPrimaryKeys(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+verifyTableName(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkOneToManyFieldsQuantity(com.challenge.suite.CandidateTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAtWithAnnotationCreatedDate(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntity(com.challenge.suite.CandidateTest)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntityListener(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkManyToOneFieldsQuantity(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAt(com.challenge.suite.CandidateTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+oneToManyFieldsFieldsAreCollection(com.challenge.suite.CandidateTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException
+

@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------
+Test set: com.challenge.suite.CompanyTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 15, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! - in com.challenge.suite.CompanyTest
+hasOneToManyCandidates(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.CompanyTest.hasOneToManyCandidates(CompanyTest.java:33)
+
+hasColumnName(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnSlug(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnSlugSize(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnSlugNotNull(com.challenge.suite.CompanyTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnNameNotNull(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnNameSized(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+verifyTableName(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkOneToManyFieldsQuantity(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAtWithAnnotationCreatedDate(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntity(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntityListener(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkManyToOneFieldsQuantity(com.challenge.suite.CompanyTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAt(com.challenge.suite.CompanyTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+
+oneToManyFieldsFieldsAreCollection(com.challenge.suite.CompanyTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+

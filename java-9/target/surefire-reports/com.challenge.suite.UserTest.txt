@@ -1,0 +1,100 @@
+-------------------------------------------------------------------------------
+Test set: com.challenge.suite.UserTest
+-------------------------------------------------------------------------------
+Tests run: 27, Failures: 0, Errors: 27, Skipped: 0, Time elapsed: 0.09 s <<< FAILURE! - in com.challenge.suite.UserTest
+hasColumnNicknameNotNull(com.challenge.suite.UserTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnNicknameNotNull(UserTest.java:93)
+
+hasOneToManySubmissions(com.challenge.suite.UserTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasOneToManySubmissions(UserTest.java:127)
+
+hasColumnEmailSize(com.challenge.suite.UserTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnEmailSize(UserTest.java:73)
+
+hasColumnPasswordSize(com.challenge.suite.UserTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnPasswordSize(UserTest.java:120)
+
+hasColumnEmail(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnEmail(UserTest.java:60)
+
+hasColumnFullNameSize(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnFullNameSize(UserTest.java:53)
+
+hasColumnNicknameSize(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnNicknameSize(UserTest.java:100)
+
+hasColumnFullNameNotNull(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnFullNameNotNull(UserTest.java:46)
+
+hasColumnEmailNotNull(com.challenge.suite.UserTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnEmailNotNull(UserTest.java:66)
+
+hasColumnNickname(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnNickname(UserTest.java:87)
+
+hasOneToManyCandidates(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasOneToManyCandidates(UserTest.java:133)
+
+hasColumnPasswordNotNull(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnPasswordNotNull(UserTest.java:113)
+
+hasColumnPassword(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnPassword(UserTest.java:107)
+
+hasColumnFullName(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnFullName(UserTest.java:40)
+
+hasColumnEmailWithEmailAnnotation(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.UserTest.hasColumnEmailWithEmailAnnotation(UserTest.java:80)
+
+hasColumnId(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasIdWithAnnotationId(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasIdWithAnnotationGeneratedValueWithStrategyIdentity(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasIdWithAnnotationGeneratedValue(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+verifyTableName(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkOneToManyFieldsQuantity(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAtWithAnnotationCreatedDate(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntity(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntityListener(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkManyToOneFieldsQuantity(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAt(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+oneToManyFieldsFieldsAreCollection(com.challenge.suite.UserTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+

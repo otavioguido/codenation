@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+Test set: com.challenge.suite.AccelerationTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 16, Skipped: 0, Time elapsed: 0.117 s <<< FAILURE! - in com.challenge.suite.AccelerationTest
+hasOneToManyCandidates(com.challenge.suite.AccelerationTest)  Time elapsed: 0.02 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.AccelerationTest.hasOneToManyCandidates(AccelerationTest.java:40)
+
+hasManyToOneChallenge(com.challenge.suite.AccelerationTest)  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.challenge.suite.AccelerationTest.hasManyToOneChallenge(AccelerationTest.java:34)
+
+hasColumnName(com.challenge.suite.AccelerationTest)  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnSlug(com.challenge.suite.AccelerationTest)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnSlugSize(com.challenge.suite.AccelerationTest)  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnSlugNotNull(com.challenge.suite.AccelerationTest)  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnNameNotNull(com.challenge.suite.AccelerationTest)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnNameSized(com.challenge.suite.AccelerationTest)  Time elapsed: 0.017 s  <<< ERROR!
+java.lang.NullPointerException
+
+verifyTableName(com.challenge.suite.AccelerationTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkOneToManyFieldsQuantity(com.challenge.suite.AccelerationTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAtWithAnnotationCreatedDate(com.challenge.suite.AccelerationTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntity(com.challenge.suite.AccelerationTest)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException
+
+isEntityListener(com.challenge.suite.AccelerationTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+checkManyToOneFieldsQuantity(com.challenge.suite.AccelerationTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+hasColumnCreatedAt(com.challenge.suite.AccelerationTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+
+oneToManyFieldsFieldsAreCollection(com.challenge.suite.AccelerationTest)  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException
+
