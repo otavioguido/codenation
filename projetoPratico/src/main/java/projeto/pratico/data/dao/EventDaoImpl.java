@@ -64,10 +64,10 @@ public class EventDaoImpl {
 
     private void stringNullorEmpty(Object object) throws InvalidFieldException {
         if (object == null)
-            throw new InvalidFieldException("Field " + object.getClass().getName() + " is null");
+            //throw new InvalidFieldException("Field " + object.getClass().getName() + " is null");
         if (object instanceof String)
             if (((String) object).isEmpty())
-                throw new InvalidFieldException("Field " + object.getClass().getName() + " is empty");
+                //throw new InvalidFieldException("Field " + object.getClass().getName() + " is empty");
 
     }
 }
