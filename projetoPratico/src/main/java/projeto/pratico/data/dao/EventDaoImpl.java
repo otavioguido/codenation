@@ -66,7 +66,7 @@ public class EventDaoImpl {
         if (object == null)
             //throw new InvalidFieldException("Field " + object.getClass().getName() + " is null");
         if (object instanceof String)
-            if (((String) object).isEmpty())
+            if (((String) object).isEmpty()){}
                 //throw new InvalidFieldException("Field " + object.getClass().getName() + " is empty");
 
     }
