@@ -53,5 +53,5 @@ public class Event {
     @Setter
     @NotNull
     @NotBlank
-    private Double quantity;
+    private Long quantity;
 }
