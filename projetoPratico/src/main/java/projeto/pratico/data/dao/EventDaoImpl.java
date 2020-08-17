@@ -13,8 +13,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * https://www.baeldung.com/java-dao-pattern
- * https://www.baeldung.com/jsf-spring-boot-controller-service-dao
+ * baeldung.com/rest-api-pagination-in-spring
+ * https://www.baeldung.com/spring-data-jpa-pagination-sorting
  */
 
 @Component
