@@ -6,11 +6,17 @@ package projeto.pratico.data.exception;
  * https://stackify.com/best-practices-exceptions-java/
  * https://stackify.com/common-mistakes-handling-java-exception/
  */
-public class InvalidFieldException extends Exception {
+public class EventException extends Exception {
 
-    private Error error;
+    public EventException(String message, Throwable cause){
+        super(message, cause);
+    }
 
-    public InvalidFieldException(String message, Throwable cause, Error error){
+    public EventException(String message) {
         super(message);
+    }
+
+    public EventException(Throwable cause) {
+        super(cause);
     }
 }

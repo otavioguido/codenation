@@ -5,6 +5,8 @@ package projeto.pratico.data.model;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -17,6 +19,7 @@ import java.util.UUID;
 @Getter
 @ToString
 @EqualsAndHashCode(exclude = {"id", "createdAt", "quantity"})
+@EntityListeners(AuditingEntityListener.class)
 public class Event {
 
     @Id
@@ -27,7 +30,7 @@ public class Event {
     @NotNull
     @NotBlank
     @Column(name = "log_level")
-    private String logLevel;
+    private LogLevel logLevel;
 
     @Setter
     @NotNull
@@ -46,12 +49,17 @@ public class Event {
     @NotBlank
     private String origin;
 
-    @CreatedDate
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
-
     @Setter
     @NotNull
     @NotBlank
     private Double quantity;
+
+    @CreatedDate
+    @Column(name = "created_at", updatable = false)
+    @NotNull
+    private LocalDateTime createdAt;
+
+    @Column(name = "modified_date")
+    @LastModifiedDate
+    private long modifiedDate;
 }

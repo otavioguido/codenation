@@ -14,4 +14,6 @@ public interface EventService {
     List<Event> findAll();
 
     void deleteEvent(Event event);
+
+    Event updateEvent(Event event);
 }

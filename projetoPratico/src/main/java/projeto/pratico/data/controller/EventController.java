@@ -34,4 +34,9 @@ public class EventController {
     public void deleteEvent(Event event){
         eventService.deleteEvent(event);
     }
+
+    @PutMapping
+    public void updateEvent(Event event){
+        eventService.updateEvent(event);
+    }
 }
