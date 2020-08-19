@@ -1,21 +1,17 @@
 package projeto.pratico.data.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import projeto.pratico.data.exception.EventException;
 import projeto.pratico.data.model.Event;
 import projeto.pratico.data.repository.EventRepository;
+import projeto.pratico.data.specification.EventSpec;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
-/**
- * baeldung.com/rest-api-pagination-in-spring
- * https://www.baeldung.com/spring-data-jpa-pagination-sorting
- */
 
 @Component
 public class EventDaoImpl implements Dao<Event> {
@@ -28,33 +24,9 @@ public class EventDaoImpl implements Dao<Event> {
         return eventRepository.findById(id);
     }
 
-    public List<Event> findByLogLevel(String logLevel, PageRequest pageRequest) {
-        return eventRepository.findByLogLevel(logLevel, pageRequest);
-    }
-
-    public List<Event> findByEventDescription(String eventDescription, PageRequest pageRequest) {
-        return eventRepository.findByEventDescription(eventDescription, pageRequest);
-    }
-
-    public List<Event> findByEventLog(String eventLog, PageRequest pageRequest) {
-        return eventRepository.findByEventLog(eventLog, pageRequest);
-    }
-
-    public List<Event> findByOrigin(String origin, PageRequest pageRequest) {
-        return eventRepository.findByOrigin(origin, pageRequest);
-    }
-
-    public List<Event> findByCreatedAt(String createdAt, PageRequest pageRequest) {
-        return eventRepository.findByCreatedAt(createdAt, pageRequest);
-    }
-
-    public List<Event> findByQuantity(String quantity, PageRequest pageRequest) {
-        return eventRepository.findByQuantity(quantity, pageRequest);
-    }
-
     @Override
-    public List<Event> getAll() {
-        return eventRepository.findAll();
+    public Page<Event> getAll(EventSpec eventSpec, Pageable pageRequest) {
+        return eventRepository.findAll(eventSpec, pageRequest);
     }
 
     @Override
@@ -106,10 +78,10 @@ public class EventDaoImpl implements Dao<Event> {
         });
     }
 
-    public void checkIfEventExist(Event event) throws EventException {
+    private void checkIfEventExist(Event event) throws EventException {
         Event eventDb = this.get(event.getId()).orElse(null);
 
-        if (!event.equals(eventDb)){
+        if (eventDb == null){
             throw new EventException("Trying to update event " + event.getId() + " but this event does not exist on the database");
         }
     }

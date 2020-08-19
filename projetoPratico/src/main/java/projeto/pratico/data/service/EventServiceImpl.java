@@ -1,12 +1,13 @@
 package projeto.pratico.data.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import projeto.pratico.data.dao.Dao;
 import projeto.pratico.data.model.Event;
-import projeto.pratico.data.repository.EventRepository;
+import projeto.pratico.data.specification.EventSpec;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -27,8 +28,8 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public List<Event> findAll(){
-        return eventDao.getAll();
+    public Page<Event> findAll(EventSpec eventSpec, Pageable pageRequest) {
+        return eventDao.getAll(eventSpec, pageRequest);
     }
 
     @Override

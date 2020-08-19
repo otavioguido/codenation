@@ -1,8 +1,5 @@
 package projeto.pratico.data.model;
 
-
-
-
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -23,13 +20,14 @@ import java.util.UUID;
 public class Event {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    @Column(updatable = false)
     private UUID id;
 
     @Setter
     @NotNull
-    @NotBlank
     @Column(name = "log_level")
+    @Enumerated(EnumType.STRING)
     private LogLevel logLevel;
 
     @Setter
@@ -51,7 +49,6 @@ public class Event {
 
     @Setter
     @NotNull
-    @NotBlank
     private Double quantity;
 
     @CreatedDate

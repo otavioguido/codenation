@@ -1,8 +1,10 @@
 package projeto.pratico.data.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import projeto.pratico.data.model.Event;
+import projeto.pratico.data.specification.EventSpec;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -11,7 +13,7 @@ public interface EventService {
 
     Optional<Event> findById(UUID uuid);
 
-    List<Event> findAll();
+    Page<Event> findAll(EventSpec eventSpec, Pageable pageRequest);
 
     void deleteEvent(Event event);
 

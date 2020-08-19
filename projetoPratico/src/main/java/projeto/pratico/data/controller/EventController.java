@@ -1,11 +1,13 @@
 package projeto.pratico.data.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import projeto.pratico.data.model.Event;
 import projeto.pratico.data.service.EventService;
+import projeto.pratico.data.specification.EventSpec;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -16,18 +18,18 @@ public class EventController {
     private EventService eventService;
 
     @PostMapping
-    public Event postEvent(Event event){
+    public Event postEvent(@RequestBody Event event){
         return eventService.saveEvent(event);
     }
 
     @GetMapping
-    public List<Event> getEvents(){
-        return eventService.findAll();
+    public Page<Event> getEventsByParam(EventSpec eventSpec, Pageable pageRequest){
+        return eventService.findAll(eventSpec, pageRequest);
     }
 
     @GetMapping("/{id}")
-    public Event getEventBy(@RequestParam UUID uuid){
-        return eventService.findById(uuid).orElse(null);
+    public Event getEventBy(@PathVariable String id){
+        return eventService.findById(UUID.fromString(id)).orElse(null);
     }
 
     @DeleteMapping
@@ -36,7 +38,7 @@ public class EventController {
     }
 
     @PutMapping
-    public void updateEvent(Event event){
+    public void updateEvent(@RequestBody Event event){
         eventService.updateEvent(event);
     }
 }
