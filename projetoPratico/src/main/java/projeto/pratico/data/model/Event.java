@@ -12,10 +12,12 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @ToString
-@EqualsAndHashCode(exclude = {"id", "createdAt", "quantity"})
+@EqualsAndHashCode(exclude = {"id", "createdAt", "modifiedDate", "quantity"})
 @EntityListeners(AuditingEntityListener.class)
 public class Event {
 
@@ -58,5 +60,5 @@ public class Event {
 
     @Column(name = "modified_date")
     @LastModifiedDate
-    private long modifiedDate;
+    private Long modifiedDate;
 }
