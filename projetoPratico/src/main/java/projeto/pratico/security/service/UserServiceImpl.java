@@ -7,34 +7,28 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import projeto.pratico.security.dao.UserDao;
 import projeto.pratico.security.dto.UserDTO;
 import projeto.pratico.security.model.User;
-import projeto.pratico.security.repository.UserRepository;
-
-import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserDao userDao;
 
-    private Page<User> findAll(Pageable pageable){
-        return userRepository.findAll(pageable);
+    @Override
+    public Page<User> findAll(Pageable pageable){
+        return userDao.findAll(pageable);
     }
 
-    private User saveUser(User user){
-        return userRepository.saveAndFlush(user);
+    @Override
+    public User saveUser(UserDTO user) throws Exception {
+        return userDao.saveUser(user);
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username).orElse(null);
-
-        if (user != null){
-            return new UserDTO(user);
-        }
-        throw new UsernameNotFoundException(username);
+        return userDao.loadUserByUsername(username);
     }
 }

@@ -1,7 +1,9 @@
 package projeto.pratico.security.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +15,6 @@ import java.util.UUID;
 
 @Entity
 @Getter
-@Setter
 public class User {
 
     @Id
@@ -29,4 +30,8 @@ public class User {
     @NotBlank
     private String password;
 
+    public User(@NotNull @NotBlank String username, @NotNull @NotBlank String password) {
+        this.username = username;
+        this.password = password;
+    }
 }

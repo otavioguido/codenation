@@ -30,10 +30,10 @@ public class WebSecurityConfigAdapter extends WebSecurityConfigurerAdapter {
     @Autowired
     public void authenticationManager(AuthenticationManagerBuilder builder, UserRepository userRepository) throws Exception {
         if (userRepository.count() == 0) {
-            User usuario = new User();
+            UserDTO usuario = new UserDTO();
             usuario.setUsername("admin");
             usuario.setPassword(passwordEncoder().encode("admin"));
-            userRepository.save(usuario);
+            userRepository.save(usuario.user());
         }
 
         builder.userDetailsService(username -> new UserDTO(userRepository.findByUsername(username).orElse(null))).passwordEncoder(passwordEncoder());
