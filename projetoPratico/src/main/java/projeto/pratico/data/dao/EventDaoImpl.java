@@ -30,7 +30,7 @@ public class EventDaoImpl implements Dao<Event> {
     }
 
     @Override
-    public Event save(Event event) {
+    public Event save(Event event) throws EventException {
         verifyEventField(event);
 
         if (event.getId() == null) {
@@ -41,16 +41,13 @@ public class EventDaoImpl implements Dao<Event> {
     }
 
     @Override
-    public Event update(Event event) {
-        try {
-            checkIfEventExist(event);
-            verifyEventField(event);
+    public Event update(Event event) throws EventException {
+        Event eventDb = checkIfEventExist(event);
+        verifyEventField(event);
+        if (eventDb.equals(event)) {
             event.setQuantity(event.getQuantity().doubleValue() + 1.0);
-            return eventRepository.saveAndFlush(event);
-        } catch (EventException e) {
-            e.printStackTrace();
-            return null;
         }
+        return eventRepository.saveAndFlush(event);
     }
 
     @Override
@@ -78,11 +75,13 @@ public class EventDaoImpl implements Dao<Event> {
         });
     }
 
-    private void checkIfEventExist(Event event) throws EventException {
+    private Event checkIfEventExist(Event event) throws EventException {
         Event eventDb = this.get(event.getId()).orElse(null);
 
         if (eventDb == null){
             throw new EventException("Trying to update event " + event.getId() + " but this event does not exist on the database");
         }
+
+        return eventDb;
     }
 }

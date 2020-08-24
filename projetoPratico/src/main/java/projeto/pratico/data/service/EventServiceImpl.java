@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import projeto.pratico.data.dao.Dao;
+import projeto.pratico.data.exception.EventException;
 import projeto.pratico.data.model.Event;
 import projeto.pratico.data.specification.EventSpec;
 
@@ -18,7 +19,7 @@ public class EventServiceImpl implements EventService {
     private Dao<Event> eventDao;
 
     @Override
-    public Event saveEvent(Event event){
+    public Event saveEvent(Event event) throws EventException {
         return eventDao.save(event);
     }
 
@@ -38,7 +39,7 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public Event updateEvent(Event event){
+    public Event updateEvent(Event event) throws EventException {
         return eventDao.update(event);
     }
 }

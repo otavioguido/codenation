@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @ToString
-@EqualsAndHashCode(exclude = {"id", "createdAt", "quantity"})
+@EqualsAndHashCode(exclude = {"id", "createdAt", "quantity", "modifiedDate"})
 @EntityListeners(AuditingEntityListener.class)
 public class Event {
 
